@@ -141,7 +141,7 @@ async def generate_session(bot: Client, msg: Message, telethon=False, old_pyro: 
             return
         except (SessionPasswordNeeded, SessionPasswordNeededError, SessionPasswordNeeded1):
             try:
-                two_step_msg = await bot.ask(user_id, ' 👨‍💻 يحتوى حسابك علي رمز التحقق بخطوتين ... الرجاء ارسال باسوورد حسابك .,' filters=filters.text, timeout=300)
+                two_step_msg = await bot.ask(user_id, ' 👨‍💻 يحتوى حسابك علي رمز التحقق بخطوتين ... الرجاء ارسال باسوورد حسابك .,' ,filters=filters.text, timeout=300)
             except TimeoutError:
                 await msg.reply('⚠️ عذرا انتهي وقت الانتظار 5 دقائق .. اارجاء المحاوله مجددا .', reply_markup=InlineKeyboardMarkup(Data.generate_button))
                 return
