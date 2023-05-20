@@ -1,0 +1,56 @@
+{
+  "name": "Pyrogram String Session Generator",
+  "description": "Telegram bot to generate pyrogram string session",
+  "logo": "",
+  "keywords": [
+    "telegram",
+    "bot",
+    "python",
+    "pyrogram"
+  ],
+    "buildpacks": [{
+    "url": "heroku/python"
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [
+      {
+         "options": {
+            "version": "12"
+         },
+         "plan": "heroku-postgresql"
+      }
+   ],
+  "repository": "https://github.com/ebnmasr25/string",
+  "env": {
+    "ENVIRONMENT": {
+      "description": "لا تغير اي شيئ !!",
+      "required": true,
+      "value": "ANYTHING"
+    },
+    "API_ID": {
+      "description": "يمكنك الحصول عليه من my.telegram.org.",
+      "required": true,
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "يمكنك الحصول عليه من  my.telegram.org.",
+      "required": true,
+      "value": ""
+    },
+    "BOT_TOKEN": {
+      "description": "توكن بوتك يمكنك الحصول عليه من @BotFather",
+      "required": true,
+      "value": ""
+    },
+    "MUST_JOIN": {
+      "description": "ضع معرف جروب الاشتراك الاجبارى ",
+      "required": true,
+      "value": ""
+    }
+  }
+}
